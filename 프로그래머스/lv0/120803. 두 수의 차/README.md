@@ -65,5 +65,13 @@
 <li><code>num1</code>이 100이고 <code>num2</code>가 2이므로 100 - 2 = 98을 return합니다.</li>
 </ul>
 
+<br>
+
+### 
+```
+function solution(num1, num2) {
+    return num1 - num2;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
