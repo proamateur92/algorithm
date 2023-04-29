@@ -1,3 +1,8 @@
+// sort 메서드를 사용해서 무조건 범위의 역순으로 정렬해야 하는데
+// 내림차순으로 정렬하는 바보같은 실수를 하였다.
+
+// slice 메서드는 원본 배열의 영향을 주지 않는다.
+
 const inputs = require("fs")
   .readFileSync(0)
   .toString()
