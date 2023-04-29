@@ -1,3 +1,6 @@
+// 출력 방식을 배열로 내보내서 실패하였다.
+// 출력 방식을 join문을 통해 변환하여 처리하였다.
+
 const inputs = require("fs")
   .readFileSync(0)
   .toString()
