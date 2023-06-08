@@ -8,7 +8,6 @@ class Solution {
         
         for(int a : arr) {
             if(a % divisor == 0) {
-                System.out.println("a=" + a);
                 list += a + " ";
             }
         }
