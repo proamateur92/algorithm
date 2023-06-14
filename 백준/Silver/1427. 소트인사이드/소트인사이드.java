@@ -5,19 +5,21 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		// 500613009
-		int num = sc.nextInt();
-		String[] sArr = String.valueOf(num).split("");
+		String str = sc.next();
+        final int LENGTH = str.length();
+        int[] nArr = new int[LENGTH];
 		
-		
-		for(int i = 0; i < sArr.length - 1; i++) {
-			int max = Integer.parseInt(sArr[i]);
-			String temp = "";
+        for(int i = 0; i < LENGTH; i++) {
+            nArr[i] = Integer.parseInt(str.substring(i, i+1));
+        }
+        
+		for(int i = 0; i < LENGTH - 1; i++) {
+			int max = nArr[i];
+			int temp = -1;
 			int idx = i;
 
-			for(int j = i + 1; j < sArr.length; j++) {
-				
-				
-				int target = Integer.parseInt(sArr[j]);
+			for(int j = i + 1; j < LENGTH; j++) {			
+				int target = nArr[j];
 				
 				if(target > max) {
 					max = target;
@@ -25,11 +27,13 @@ public class Main {
 				}
 			}
 			
-			temp = sArr[i];
-			sArr[i] = String.valueOf(max);
-			sArr[idx] = temp;
+			temp = nArr[i];
+			nArr[i] = max;
+			nArr[idx] = temp;
 		}
 		
-		System.out.println(String.join("", sArr));
+        for(int i = 0; i < LENGTH; i++) {
+            System.out.print(nArr[i]);
+        }
 	}
 }
