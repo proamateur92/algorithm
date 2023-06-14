@@ -14,22 +14,19 @@ public class Main {
         }
         
 		for(int i = 0; i < LENGTH - 1; i++) {
-			int max = nArr[i];
-			int temp = -1;
-			int idx = i;
+			int max = i;
 
 			for(int j = i + 1; j < LENGTH; j++) {			
-				int target = nArr[j];
-				
-				if(target > max) {
-					max = target;
-					idx = j;
+				if(nArr[j] > nArr[max]) {
+					max = j;
 				}
 			}
 			
-			temp = nArr[i];
-			nArr[i] = max;
-			nArr[idx] = temp;
+            if(nArr[max] > nArr[i]) {
+                int temp = nArr[i];
+			    nArr[i] = nArr[max];
+			    nArr[max] = temp;                
+            }
 		}
 		
         for(int i = 0; i < LENGTH; i++) {
